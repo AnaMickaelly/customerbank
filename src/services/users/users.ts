@@ -9,3 +9,12 @@ export const GetUser = async (): Promise<UsersProps | undefined> => {
     console.log(error);
   }
 };
+
+export const DeleteUser = async (id: string): Promise<void> => {
+  try {
+    const response = await api.delete(`/users/${id}`);
+    return response?.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
