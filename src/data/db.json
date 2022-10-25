@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Guilherme Q2Pay",
+      "date": "Atualizado em 29/10/2022",
       "document": "904.289.970-07",
       "bank": {
         "bankName": "237 - Banco Bradesco S.A.",
@@ -14,6 +15,7 @@
     {
       "id": 2,
       "name": "Dimitry Q2Pay",
+      "date": "Atualizado em 22/09/2022",
       "document": "025.666.670-98",
       "bank": {
         "bankName": "033 - Banco Santander Brasil S.A.",
@@ -25,6 +27,7 @@
     {
       "id": 3,
       "name": "Juan Q2Pay",
+      "date": "Atualizado em 12/11/2021",
       "document": "092.607.860-70",
       "bank": {
         "bankName": "001 - Banco do Brasil S.A.",

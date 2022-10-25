@@ -7,6 +7,7 @@ const Table = ({ data }: UsersProps) => {
       <thead>
         <tr>
           <th>Nome</th>
+          <th>Data</th>
           <th>Documento</th>
           <th>Banco</th>
           <th>Agência</th>
@@ -19,6 +20,7 @@ const Table = ({ data }: UsersProps) => {
         {data?.map((user) => (
           <tr key={user?.id}>
             <td>{user?.name}</td>
+            <td>{user?.date}</td>
             <td>{user?.document}</td>
             <td>{user?.bank?.bankName}</td>
             <td>{user?.bank?.agency}</td>

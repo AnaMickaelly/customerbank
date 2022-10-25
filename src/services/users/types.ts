@@ -6,6 +6,7 @@ export type UsersProps = {
       agency: string;
       account: string;
     };
+    date: string;
     document: string;
     id: number;
     name: string;
