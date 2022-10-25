@@ -33,6 +33,12 @@ In another terminal run the command:
 5. yarn dev
 ```
 
+### Credentials to login the dashboard
+
+Email: user@gmail.com
+
+Password: 123456
+
 ## 🛠️ Built with
 
 - [React.js](https://pt-br.reactjs.org/) - Used web library
