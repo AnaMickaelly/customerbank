@@ -12,3 +12,14 @@ export type UsersProps = {
     name: string;
   }>;
 };
+
+export type UserProps = {
+  bank: {
+    bankName: string;
+    agency: string;
+    account: string;
+  };
+  date: string;
+  document: string;
+  name: string;
+};

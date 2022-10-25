@@ -1,4 +1,4 @@
-import { FieldValues, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useModal } from '../../hooks/useModal';
 import { CreateUser } from '../../services/users/users';
 import { Button } from '../Button';
@@ -8,7 +8,7 @@ const ModalCreateUser = () => {
   const { closeModal } = useModal();
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = async (data: FieldValues) => {
+  const onSubmit = async (data: any) => {
     try {
       await CreateUser(data);
       window.location.reload();

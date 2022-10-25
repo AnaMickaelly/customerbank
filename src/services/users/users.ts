@@ -1,5 +1,5 @@
 import api from '../api';
-import { UsersProps } from './types';
+import { UserProps, UsersProps } from './types';
 
 export const GetUser = async (): Promise<UsersProps | undefined> => {
   try {
@@ -20,7 +20,7 @@ export const DeleteUser = async (id: string): Promise<void> => {
 };
 
 export const CreateUser = async (
-  data: any
+  data: UserProps
 ): Promise<UsersProps | undefined> => {
   try {
     const response = await api.post('/users', data);
