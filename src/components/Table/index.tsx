@@ -1,8 +1,13 @@
 import { useModal } from '../../hooks/useModal';
-import { UsersProps } from '../../services/users/types';
+import { UserProps, UsersProps } from '../../services/users/types';
 import { DeleteUser } from '../../services/users/users';
+import { ModalCreateUser } from '../ModalCreateUser';
 import { ModalDeleteUser } from './components/ModalDeleteUser';
 import { TableContainer } from './styles';
+
+type TableProps = {
+  data: UserProps;
+};
 
 const Table = ({ data }: UsersProps) => {
   const { handleOpenModal, closeModal } = useModal();
@@ -26,6 +31,13 @@ const Table = ({ data }: UsersProps) => {
           close={() => handleDeleteUser(id)}
         />
       ),
+    });
+  };
+
+  const handleOpenModalEditUser = ({ data }: TableProps) => {
+    handleOpenModal({
+      title: 'Editar Usuário:',
+      element: <ModalCreateUser edit data={data} />,
     });
   };
 
@@ -53,7 +65,11 @@ const Table = ({ data }: UsersProps) => {
             <td>{user?.bank?.agency}</td>
             <td>{user?.bank?.account}</td>
             <div className="actions">
-              <img src="images/icons/icon-edit.png" alt="Editar" />
+              <img
+                onClick={() => handleOpenModalEditUser({ data: user })}
+                src="images/icons/icon-edit.png"
+                alt="Editar"
+              />
               <img
                 onClick={() => handleOpenModalDeleteUser(String(user?.id))}
                 src="images/icons/icon-remove.png"

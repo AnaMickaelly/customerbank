@@ -29,3 +29,15 @@ export const CreateUser = async (
     console.log(error);
   }
 };
+
+export const EditUser = async (
+  data: UserProps,
+  id?: number
+): Promise<UsersProps | undefined> => {
+  try {
+    const response = await api.put(`/users/${id}`, data);
+    return response?.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

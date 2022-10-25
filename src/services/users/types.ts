@@ -22,4 +22,5 @@ export type UserProps = {
   date: string;
   document: string;
   name: string;
+  id: number;
 };
