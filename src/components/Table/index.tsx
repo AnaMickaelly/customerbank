@@ -64,7 +64,7 @@ const Table = ({ data }: UsersProps) => {
             <td>{user?.bank?.bankName}</td>
             <td>{user?.bank?.agency}</td>
             <td>{user?.bank?.account}</td>
-            <div className="actions">
+            <td className="actions">
               <img
                 onClick={() => handleOpenModalEditUser({ data: user })}
                 src="images/icons/icon-edit.png"
@@ -75,7 +75,7 @@ const Table = ({ data }: UsersProps) => {
                 src="images/icons/icon-remove.png"
                 alt="Excluir"
               />
-            </div>
+            </td>
           </tr>
         ))}
       </tbody>
