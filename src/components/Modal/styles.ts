@@ -25,7 +25,7 @@ export const WrapperModal = styled.div`
   margin: auto;
   width: 100%;
   height: 100%;
-  max-width: 450px;
+  max-width: 550px;
   max-height: 320px;
   padding: 20px;
   border-radius: 12px;
