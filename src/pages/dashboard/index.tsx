@@ -6,7 +6,7 @@ import { ModalCreateUser } from '../../components/ModalCreateUser';
 import { Table } from '../../components/Table';
 import { useModal } from '../../hooks/useModal';
 import { UsersProps } from '../../services/users/types';
-import { Container, ContainerTable, Footer, Header } from './styles';
+import { Container, ContainerTable, Header } from './styles';
 
 const Dashboard = ({ data }: UsersProps) => {
   const router = useRouter();
@@ -40,13 +40,6 @@ const Dashboard = ({ data }: UsersProps) => {
       <ContainerTable>
         <Table data={data} />
       </ContainerTable>
-      <Footer>
-        <h2>
-          Customer Bank - 2022
-          <br />
-          Todos os direitos reservados
-        </h2>
-      </Footer>
     </Container>
   );
 };

@@ -31,12 +31,3 @@ export const ContainerTable = styled.div`
   align-items: center;
   margin: 0 22px;
 `;
-
-export const Footer = styled.footer`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-`;

@@ -59,6 +59,11 @@ const Login = () => {
       <LoginContainer>
         <FormLogin onSubmit={handleSubmit(onSubmit)}>
           <Content>
+            <img
+              className="img-login"
+              src="/images/logo-customerbankbackground.png"
+              alt="logo"
+            />
             <h2>Login</h2>
             <p>Acesse sua conta agora mesmo!</p>
           </Content>

@@ -24,6 +24,10 @@ export const Wrapper = styled.div`
     font-weight: 400;
     font-size: 14px;
   }
+
+  @media screen and (max-width: 920px) {
+    display: none;
+  }
 `;
 
 export const ImageContent = styled.div`
@@ -41,6 +45,19 @@ export const LoginContainer = styled.div`
   background-color: #0054ff;
   width: 40%;
   height: 100vh;
+
+  img {
+    display: none;
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
+
+    img {
+      display: initial;
+      width: 270px;
+    }
+  }
 `;
 
 export const Content = styled.div`
