@@ -10,7 +10,7 @@ const Table = ({ data }: UsersProps) => {
   const handleDeleteUser = async (id: string) => {
     try {
       await DeleteUser(id);
-
+      window.location.reload();
       closeModal();
     } catch (error) {
       console.log(error);

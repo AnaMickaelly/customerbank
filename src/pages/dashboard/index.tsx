@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import nookies from 'nookies';
+import { destroyCookie } from 'nookies';
 import '../../../public/images/logo-customerbank.png';
 import { Button } from '../../components/Button';
 import { ModalCreateUser } from '../../components/ModalCreateUser';
@@ -20,7 +20,7 @@ const Dashboard = ({ data }: UsersProps) => {
   };
 
   const logout = () => {
-    nookies.destroy(null, 'token');
+    destroyCookie(null, 'token');
     router.push('/');
   };
 

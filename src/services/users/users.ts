@@ -18,3 +18,14 @@ export const DeleteUser = async (id: string): Promise<void> => {
     console.log(error);
   }
 };
+
+export const CreateUser = async (
+  data: any
+): Promise<UsersProps | undefined> => {
+  try {
+    const response = await api.post('/users', data);
+    return response?.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
