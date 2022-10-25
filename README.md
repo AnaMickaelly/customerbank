@@ -39,6 +39,12 @@ Email: user@gmail.com
 
 Password: 123456
 
+## Screenshots
+
+![Desktop login](/.github/login-desktop.png 'Desktop login')
+![Mobile login](/.github/login-mobile.png 'Mobile login')
+![Dashboard](/.github/dashboard.png 'Dashboard')
+
 ## 🛠️ Built with
 
 - [React.js](https://pt-br.reactjs.org/) - Used web library
