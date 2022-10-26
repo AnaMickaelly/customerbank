@@ -56,28 +56,39 @@ const Table = ({ data }: UsersProps) => {
         </tr>
       </thead>
       <tbody>
-        {data?.map((user) => (
-          <tr key={user?.id}>
-            <td>{user?.name}</td>
-            <td>{user?.date}</td>
-            <td>{user?.document}</td>
-            <td>{user?.bank?.bankName}</td>
-            <td>{user?.bank?.agency}</td>
-            <td>{user?.bank?.account}</td>
-            <td className="actions">
-              <img
-                onClick={() => handleOpenModalEditUser({ data: user })}
-                src="images/icons/icon-edit.png"
-                alt="Editar"
-              />
-              <img
-                onClick={() => handleOpenModalDeleteUser(String(user?.id))}
-                src="images/icons/icon-remove.png"
-                alt="Excluir"
-              />
-            </td>
+        {data ? (
+          data?.map((user) => (
+            <tr key={user?.id}>
+              <td>{user?.name}</td>
+              <td>{user?.date}</td>
+              <td>{user?.document}</td>
+              <td>{user?.bank?.bankName}</td>
+              <td>{user?.bank?.agency}</td>
+              <td>{user?.bank?.account}</td>
+              <td className="actions">
+                <img
+                  onClick={() => handleOpenModalEditUser({ data: user })}
+                  src="images/icons/icon-edit.png"
+                  alt="Editar"
+                />
+                <img
+                  onClick={() => handleOpenModalDeleteUser(String(user?.id))}
+                  src="images/icons/icon-remove.png"
+                  alt="Excluir"
+                />
+              </td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td>Não há informações.</td>
+            <td>Não há informações.</td>
+            <td>Não há informações.</td>
+            <td>Não há informações.</td>
+            <td>Não há informações.</td>
+            <td>Não há informações.</td>
           </tr>
-        ))}
+        )}
       </tbody>
     </TableContainer>
   );
