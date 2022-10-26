@@ -1,3 +1,4 @@
+import Avatar from 'boring-avatars';
 import { useModal } from '../../hooks/useModal';
 import { UserProps, UsersProps } from '../../services/users/types';
 import { DeleteUser } from '../../services/users/users';
@@ -45,6 +46,7 @@ const Table = ({ data }: UsersProps) => {
     <TableContainer>
       <thead>
         <tr>
+          <th></th>
           <th>Nome</th>
           <th>Data</th>
           <th>Documento</th>
@@ -59,6 +61,14 @@ const Table = ({ data }: UsersProps) => {
         {data ? (
           data?.map((user) => (
             <tr key={user?.id}>
+              <td>
+                <Avatar
+                  size={40}
+                  key={user?.id}
+                  name={user.name}
+                  variant="beam"
+                />
+              </td>
               <td>{user?.name}</td>
               <td>{user?.date}</td>
               <td>{user?.document}</td>

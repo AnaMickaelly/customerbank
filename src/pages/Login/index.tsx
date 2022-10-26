@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import nookies from 'nookies';
 import { FieldValues, useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import '../../../public/images/logo-customerbank.png';
 import { Button } from '../../components/Button';
-import { Input } from '../../components/Input';
 import { GenerationToken } from '../../services/security';
 import {
   Container,
@@ -24,8 +24,13 @@ const Login = () => {
 
   const onSubmit = (data: FieldValues) => {
     try {
-      if (data.email !== 'user@gmail.com' && data.password !== '123456') {
-        console.log('error');
+      if (data.email !== 'user@gmail.com' || data.password !== '123456') {
+        toast('Email ou senha incorretas. Tente novamente.', {
+          position: 'bottom-center',
+          style: { backgroundColor: '#E53E3E', color: '#fff' },
+        });
+
+        return;
       }
 
       const dataToken = GenerationToken();
@@ -67,13 +72,13 @@ const Login = () => {
             <h2>Login</h2>
             <p>Acesse sua conta agora mesmo!</p>
           </Content>
-          <Input
+          <input
             {...register('email')}
             name="email"
             type="email"
             placeholder="Digite seu email:"
           />
-          <Input
+          <input
             {...register('password')}
             name="password"
             type="password"
