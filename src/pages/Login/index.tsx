@@ -25,10 +25,13 @@ const Login = () => {
   const onSubmit = (data: FieldValues) => {
     try {
       if (data.email !== 'user@gmail.com' || data.password !== '123456') {
-        toast('Email ou senha incorretas. Tente novamente.', {
-          position: 'bottom-center',
-          style: { backgroundColor: '#E53E3E', color: '#fff' },
-        });
+        toast(
+          'Email ou senha incorretas. Verifique a documentação no Github.',
+          {
+            position: 'bottom-center',
+            style: { backgroundColor: '#E53E3E', color: '#fff' },
+          }
+        );
 
         return;
       }
@@ -36,6 +39,10 @@ const Login = () => {
       const dataToken = GenerationToken();
       nookies.set(null, 'token', dataToken.token, {
         maxAge: 30 * 24 * 60 * 60,
+      });
+      toast('Login realizado com sucesso!', {
+        position: 'bottom-center',
+        style: { backgroundColor: '#38A169', color: '#fff' },
       });
       router.push('/dashboard');
     } catch (error) {

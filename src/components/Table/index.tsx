@@ -1,4 +1,6 @@
 import Avatar from 'boring-avatars';
+import { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { useModal } from '../../hooks/useModal';
 import { UserProps, UsersProps } from '../../services/users/types';
 import { DeleteUser } from '../../services/users/users';
@@ -41,6 +43,15 @@ const Table = ({ data }: UsersProps) => {
       element: <ModalCreateUser edit data={data} />,
     });
   };
+
+  useEffect(() => {
+    if (!data) {
+      toast('Erro ao trazer os dados. Verifique a documentação no Github.', {
+        position: 'bottom-center',
+        style: { backgroundColor: '#E53E3E', color: '#fff' },
+      });
+    }
+  }, [data]);
 
   return (
     <TableContainer>
@@ -91,6 +102,7 @@ const Table = ({ data }: UsersProps) => {
           ))
         ) : (
           <tr>
+            <td>Não há informações.</td>
             <td>Não há informações.</td>
             <td>Não há informações.</td>
             <td>Não há informações.</td>

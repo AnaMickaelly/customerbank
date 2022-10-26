@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { destroyCookie } from 'nookies';
+import toast from 'react-hot-toast';
 import '../../../public/images/logo-customerbank.png';
 import { Button } from '../../components/Button';
 import { ModalCreateUser } from '../../components/ModalCreateUser';
@@ -21,6 +22,10 @@ const Dashboard = ({ data }: UsersProps) => {
 
   const logout = () => {
     destroyCookie(null, 'token');
+    toast('Muito obrigado por utilizar o Customer Bank!  {^_^}/', {
+      position: 'bottom-center',
+      style: { backgroundColor: '#38A169', color: '#fff' },
+    });
     router.push('/');
   };
 
