@@ -61,10 +61,4 @@ Password: 123456
 - **Developer** - [Ana Mickaelly](https://www.linkedin.com/in/anamickaellydev/)
 - **Design - UI/UX** - [Ana Mickaelly](https://www.linkedin.com/in/anamickaellydev/)
 
-## 🎁 Expressions of gratitude
-
-Thanks, Ana Paula for the guidance and patience, I appreciate the opportunity, I hope the code is interesting, any questions contact me! 🥰
-
----
-
 ⌨️ with ❤️ by [Ana Mickaelly](https://www.linkedin.com/in/anamickaellydev/)
